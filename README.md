@@ -1,6 +1,10 @@
-# Beer Tally
+# Response Tracker
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+
+## Packages
+
+Download and install node package manager, then run `npm install` from within the root directory of this project. Once that it is down, download and install the Angular CLI (link above).
 
 ## Development server
 

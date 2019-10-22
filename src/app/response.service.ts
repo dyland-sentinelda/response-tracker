@@ -42,7 +42,7 @@ export class ResponseService {
     this.firestore.doc('responses/' + response.id).update(response);
   }
 
-  addBeer(response: Response) {
+  addResponse(response: Response) {
     this.firestore.doc('responses/' + response.id).update({
       timeStamp: firebase.firestore.FieldValue.serverTimestamp()
     });

@@ -16,13 +16,9 @@
         <div fxLayout="row">
           <h1>{{responseType.numResponses}}</h1>
           <div fxFlex="15px"></div>
-          <button mat-icon-button (click)="addBeer(responseType, newResponse.value); newResponse.value = ''" color="primary">
+          <button mat-icon-button (click)="addResponse(responseType, newResponse.value); newResponse.value = ''" color="primary">
             <h1>+</h1>
           </button>
-          <!-- <button mat-icon-button [disabled]="!owesBeer(responseType.numResponses)" (click)="subtractBeer(responseType)"
-            color="primary">
-            <h1>-</h1>
-          </button> -->
         </div>
       </div>
     </div>

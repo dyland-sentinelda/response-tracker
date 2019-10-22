@@ -9,22 +9,19 @@ import * as firebase from 'firebase';
 })
 export class ResponseTypeService {
 
-  responseTypeLocal: ResponseType[];
-  responseTypeLocalTwo: ResponseType;
-
   constructor(private firestore: AngularFirestore) { }
 
   getresponseTypes() {
     return this.firestore.collection('responseTypes', ref => ref.orderBy('responseTypeName', 'desc')).snapshotChanges();
   }
 
-  addBeer(responseType: ResponseType) {
+  addResponse(responseType: ResponseType) {
     this.firestore.doc('responseTypes/' + responseType.id).update({
       numResponses: firebase.firestore.FieldValue.increment(1)
     });
   }
 
-  subtractBeer(responseType: ResponseType) {
+  subtractResponse(responseType: ResponseType) {
     if (responseType.numResponses > 0) {
       this.firestore.doc('responseTypes/' + responseType.id).update({
         numResponses: firebase.firestore.FieldValue.increment(-1)

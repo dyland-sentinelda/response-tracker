@@ -38,16 +38,12 @@ export class ResponsesComponent implements OnInit {
     this.responseService.updateResponse(response);
   }
 
-  addBeer(response: Response) {
-    this.responseService.addBeer(response);
+  addResponse(response: Response) {
+    this.responseService.addResponse(response);
   }
 
   delete(response: Response) {
     this.responseService.deleteResponse(response.id);
     this.responseTypeService.updateResponseType(response.responseTypeId);
-  }
-
-  owesBeer(numResponses: number): boolean {
-    return numResponses > 0;
   }
 }

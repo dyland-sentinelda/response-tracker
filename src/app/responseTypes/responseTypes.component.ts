@@ -27,16 +27,12 @@ export class ResponseTypesComponent implements OnInit {
     });
   }
 
-  addBeer(responseType: ResponseType, personName: string) {
-    this.responseTypeService.addBeer(responseType);
+  addResponse(responseType: ResponseType, personName: string) {
+    this.responseTypeService.addResponse(responseType);
     this.responseService.createResponse(responseType, personName);
   }
 
-  subtractBeer(responseType: ResponseType) {
-    this.responseTypeService.subtractBeer(responseType);
-  }
-
-  owesBeer(numResponses: number): boolean {
-    return numResponses > 0;
+  subtractResponse(responseType: ResponseType) {
+    this.responseTypeService.subtractResponse(responseType);
   }
 }
